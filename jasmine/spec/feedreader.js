@@ -1,7 +1,6 @@
 /* feedreader.js
  *
- * This is the spec file that Jasmine will read and contains
- * all of the tests that will be run against your application.
+ * Contains all of the tests that will be run against application.
  */
 
 /* We're placing all of our tests within the $() function,
@@ -75,7 +74,12 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
-    /* TODO: Write a new test suite named "Initial Entries" */
+    /* This test suite is for initial entries. */
+
+    describe('Initial Entries', function(){
+
+
+    });
 
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -84,7 +88,12 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
-    /* TODO: Write a new test suite named "New Feed Selection" */
+    /* Test suite for new feed selection */
+
+    describe('New Feed Selection',function(){
+
+
+    });
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
