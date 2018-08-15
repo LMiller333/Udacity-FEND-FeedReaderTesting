@@ -17,3 +17,6 @@ The key project file is the feedreader.js file located in [jasmine/spec](https:/
 - [Google Fonts](https://fonts.google.com/): Pretty fonts, obviously
 - [Google JavaScript API](https://www.google.com/jsapi): To connect with Google APIs
 - [Handlebars](https://handlebarsjs.com/): For templating and stuff
+
+## Acknowledgements
+Thanks to [Anil G's post on the Udacity Forums](https://knowledge.udacity.com/questions/1649) for helping me to figure out the appropriate implementation of the done callback.
