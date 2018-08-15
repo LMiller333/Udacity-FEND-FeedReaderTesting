@@ -20,6 +20,7 @@ $(function() {
          * the rest of this project. What happens when you change
          * allFeeds in app.js to be an empty array and refresh the
          * page?
+         * Answer: Error. Expected 0 not to be 0.
          */
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
@@ -27,20 +28,40 @@ $(function() {
         });
 
 
-        /* TODO: Write a test that loops through each feed
+        /* This test loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
 
+        allFeeds.forEach(function(item){
+            it('has defined URL that is not empty',function(){
+                expect(item.url).toBeDefined();
+                expect(item.url).not.toBe("");
+            });
+        });
+        
 
-        /* TODO: Write a test that loops through each feed
+
+        /* This test loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+        allFeeds.forEach(function(item){
+            it('has defined URL that is not empty',function(){
+                expect(item.name).toBeDefined();
+                expect(item.name).not.toBe("");
+            });
+        });
+
     });
 
 
-    /* TODO: Write a new test suite named "The menu" */
+    /* This test suite is about the menu.*/
+
+    describe('The menu', function(){
+
+
+    });
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
