@@ -8,7 +8,7 @@ This project was completed as part of Udacity's Front End Nanodegree Program. It
    - You may need to scroll down to see the Jasmine test report log!
    
 ## Key Files
-The key project file is the jasmine/spec/feedreader.js file. This file contains the test suites and specs within each of those suites. This file primarily refers to functions within the app.js file and elements/classes that may be viewed within the index.html file.
+The key project file is the feedreader.js file located in [jasmine/spec](https://github.com/LMiller333/Udacity-FEND-FeedReaderTesting/tree/master/jasmine/spec). This file contains the test suites and specs within each of those suites. This file primarily refers to functions within the app.js file and elements/classes that may be viewed within the index.html file.
 
 ## Built With
 
