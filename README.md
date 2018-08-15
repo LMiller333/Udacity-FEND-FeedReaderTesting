@@ -12,8 +12,8 @@ The key project file is the feedreader.js file located in [jasmine/spec](https:/
 
 ## Built With
 
-- [Jasmine](https://jasmine.github.io/)
-- [jQuery 2.2.1](https://jquery.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [Google JavaScript API](https://www.google.com/jsapi)
-- [Handlebars](https://handlebarsjs.com/)
+- [Jasmine](https://jasmine.github.io/): Testing framework
+- [jQuery 2.2.1](https://jquery.com/): JavaScript library
+- [Google Fonts](https://fonts.google.com/): Pretty fonts, obviously
+- [Google JavaScript API](https://www.google.com/jsapi): To connect with Google APIs
+- [Handlebars](https://handlebarsjs.com/): For templating and stuff
