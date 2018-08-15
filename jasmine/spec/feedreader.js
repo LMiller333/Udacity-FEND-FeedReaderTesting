@@ -118,7 +118,7 @@ $(function() {
          */
 
         it('.feed content should update when new feed loaded', function(){
-            expect($('.feed').html().not.toBe(initialFeed);
+            expect($('.feed').html()).not.toBe(initialFeed);
         });
 
     });
