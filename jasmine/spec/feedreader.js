@@ -8,6 +8,7 @@
  * to ensure they don't run until the DOM is ready.
  */
 $(function() {
+
     /* This is our first test suite - a test suite just contains
     * a related set of tests. This suite is all about the RSS
     * feeds definitions, the allFeeds variable in our application.
@@ -70,10 +71,10 @@ $(function() {
         });
 
         /* This test ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
-          */
+         * visibility when the menu icon is clicked. This test
+         * should have two expectations: does the menu display when
+         * clicked and does it hide when clicked again.
+         */
         
         it('change visibility when clicked',function(){
             $('.menu-icon-link').click();
@@ -88,27 +89,55 @@ $(function() {
 
     /* This test suite is for initial entries. */
 
+
     describe('Initial Entries', function(){
 
+        /* Since loadFeed() is asynchronous, this test requires
+         * the use of Jasmine's beforeEach and asynchronous done() function.
+         */
+        
+        beforeEach(function(done) {
+            loadFeed(0, done);
+        });
+
+        /* This test ensures when the loadFeed
+         * function is called and completes its work, there is at least
+         * a single .entry element within the .feed container.
+         */
+
+        it('.feed should have at least one .entry element',function(){
+           expect($(".feed .entry").length).toBeGreaterThan(0);
+        });
 
     });
 
-        /* TODO: Write a test that ensures when the loadFeed
-         * function is called and completes its work, there is at least
-         * a single .entry element within the .feed container.
-         * Remember, loadFeed() is asynchronous so this test will require
-         * the use of Jasmine's beforeEach and asynchronous done() function.
-         */
+
 
     /* Test suite for new feed selection */
 
-    describe('New Feed Selection',function(){
 
+
+    describe('New Feed Selection',function(){
+    
+        var initialFeed;
+        
+        beforeEach(function(done) {
+            loadFeed(0);
+            initialFeed = $('.feed').html();
+            loadFeed(1,done);
+        });
+
+        /* This test ensures when a new feed is loaded
+         * by the loadFeed function that the content actually changes.
+         */
+
+        it('.feed content should update when new feed loaded', function(){
+            expect($('.feed').html).not.toBe(initialFeed);
+        });
 
     });
 
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
-         */
+
+
+    
 }());
